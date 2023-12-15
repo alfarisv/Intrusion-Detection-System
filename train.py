@@ -31,10 +31,10 @@ print_z_scores = False # Gunakan ini untuk print z_scores
 # ==========================
 
 # Load the data
-df = pd.read_csv('UNSW-NB15_4.csv',encoding="ISO-8859-1")
+df = pd.read_csv('Dataset/UNSW-NB15_4.csv',encoding="ISO-8859-1")
 
 # Load features from NUSW-NB15_features.csv
-df_features = pd.read_csv('NUSW-NB15_features.csv',encoding="ISO-8859-1")
+df_features = pd.read_csv('Dataset/NUSW-NB15_features.csv',encoding="ISO-8859-1")
 
 # Apply features to the dataset
 df.columns = df_features['Name'].values
