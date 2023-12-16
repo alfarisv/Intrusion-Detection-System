@@ -72,6 +72,20 @@ print(" ")
 
 print("X_train shape before high corr filter:", X_train.shape)
 
+# Label encoding
+le = LabelEncoder()
+
+# Using loop to encode all the columns with object datatype to float 
+for i in X_train.columns:
+    if X_train[i].dtypes=='object':
+        if debug:
+            print(f"Encoding: {i}")
+        X_train[i]=le.fit_transform(X_train[i])
+
+for i in X_train.columns:
+    if X_test[i].dtypes=='object':
+        X_test[i]=le.fit_transform(X_test[i])
+        
 # Finding dan Remove high correlation features
 corr_mat = X_train.corr(method='pearson')
 columns = corr_mat.columns
@@ -94,19 +108,7 @@ print(" ")
 
 print("Using Label Encoder to convert object to float...")
 
-# Label encoding
-le = LabelEncoder()
 
-# Using loop to encode all the columns with object datatype to float 
-for i in X_train.columns:
-    if X_train[i].dtypes=='object':
-        if debug:
-            print(f"Encoding: {i}")
-        X_train[i]=le.fit_transform(X_train[i])
-
-for i in X_train.columns:
-    if X_test[i].dtypes=='object':
-        X_test[i]=le.fit_transform(X_test[i])
 
 
 print(" ")
