@@ -1,5 +1,5 @@
 # Intrusion Detection System
-This is project to create an IDS using Machine Learning. 
+This is a project to create an IDS using Machine Learning. 
 The models used here are Decision Tree, Random Forest, and SVM. 
 
 ## Dataset
