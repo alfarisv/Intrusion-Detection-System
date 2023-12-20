@@ -31,6 +31,7 @@ The dataset comprises 49 features, categorized into three different datatypes:
 ### Numerical Features:
 - The rest of the features are numerical in nature, representing various aspects of network transactions.
 
+##Feature
 
 | #   | Feature             | Type      | Description                                                         |
 | --- | ------------------- | --------- | ------------------------------------------------------------------- |
@@ -84,7 +85,18 @@ The dataset comprises 49 features, categorized into three different datatypes:
 | 48  | attack_cat          | nominal   | The name of each attack category                                    |
 | 49  | Label               | binary    | 0 for normal and 1 for attack records                               |
 
-
+##Attack Cat
+| Attack Category   | Occurrences |
+|-------------------|-------------|
+| Generic           | 193,696     |
+| Exploits          | 40,112      |
+| Fuzzers           | 21,920      |
+| DoS               | 14,723      |
+| Reconnaissance    | 12,624      |
+| Analysis          | 2,400       |
+| Backdoor          | 2,103       |
+| Shellcode         | 1,359       |
+| Worms             | 156         |
 ## ML Problem Formulation
 
 #### Binary classification of attack category
